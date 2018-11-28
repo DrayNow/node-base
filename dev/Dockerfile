@@ -13,9 +13,13 @@ ENV PGWEB_VERSION=0.9.12 \
     PGWEB_USER=pgweb \
     PGWEB_DIR=/app/pgweb
 
-# Install pgweb
+# Install dependencies
 RUN apk update && \
     apk add --no-cache build-base \
+        chromium-chromedriver \
+        udev \
+        ttf-freefont \
+        chromium \
         readline-dev \
         openssl-dev \
         zlib-dev \
