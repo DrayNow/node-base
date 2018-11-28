@@ -20,6 +20,7 @@ RUN apk update && \
         udev \
         ttf-freefont \
         chromium \
+        util-linux \
         readline-dev \
         openssl-dev \
         zlib-dev \
@@ -33,4 +34,5 @@ RUN apk update && \
     mkdir -p $PGWEB_DIR && \
     unzip /tmp/pgweb-$PGWEB_VERSION.zip -d $PGWEB_DIR && \
     apk --purge del build-base openssl-dev zlib-dev libxml2-dev wget gnupg unzip ca-certificates && \
-    rm -r /tmp/pgweb-$PGWEB_VERSION.zip /var/cache/apk/*
+    rm -r /tmp/pgweb-$PGWEB_VERSION.zip /var/cache/apk/* && \
+    yarn global add pm2
