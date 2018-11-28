@@ -16,6 +16,7 @@ ENV PGWEB_VERSION=0.9.12 \
 # Install dependencies
 RUN apk update && \
     apk add --no-cache build-base \
+        chromium \
         chromium-chromedriver \
         udev \
         ttf-freefont \
