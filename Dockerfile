@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8.9
+FROM mhart/alpine-node:10
 
 # Dependencies
-RUN apk --no-cache add --virtual builds-deps build-base python vim
+RUN apk update && apk upgrade && apk --no-cache add --virtual builds-deps build-base python vim
